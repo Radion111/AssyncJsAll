@@ -23,13 +23,13 @@ function App() {
         Setdataeye(data);
         return data;
       });
-  },[]);
+  }, []);
   // Component didMount
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <div>
           <div>Дание через api взяти с этого сайта </div>
           <a
             className="aaa"
@@ -38,14 +38,14 @@ function App() {
           >
             https://jsonplaceholder.typicode.com/posts
           </a>
-        </p>
+        </div>
         <ul>
           {dataeye.map((item, index) => (
             <li className="myli" key={index}>
-              <p className="userId">UserId={item.userId}</p>
-              <p className="id">id={item.id}</p>
-              <p className="title">title=[ {item.title} ]</p>
-              <p className="body">body=[ {item.body} ]</p>
+              <div className="userId">UserId={item.userId}</div>
+              <div className="id">id={item.id}</div>
+              <div className="title">title=[ {item.title} ]</div>
+              <div className="body">body=[ {item.body} ]</div>
             </li>
           ))}
         </ul>
